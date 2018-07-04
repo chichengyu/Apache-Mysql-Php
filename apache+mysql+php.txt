@@ -1,0 +1,58 @@
+Apache：
+    Apache的配置文件apache安装路径/conf/httpd.conf 中检测以下内容
+
+    ServerRoot "D:/LAMP/apache/Apache24"
+
+    Listen 80(httpd -t查看那些进程使用80端口,避免冲突改8000)
+
+    DocumentRoot "D:/LAMP/apache/Apache24/htdocs"
+    <Directory "D:/LAMP/apache/Apache24/htdocs">
+
+    ScriptAlias /cgi-bin/ "D:/LAMP/apache/Apache24/cgi-bin/"
+    <Directory "D:/LAMP/apache/Apache24/cgi-bin">
+
+    在最后加上如下支持：
+    # php5 support
+    LoadModule php5_module D:/LAMP/php/php5apache2_4.dll
+    AddType application/x-httpd-php .php .html .htm
+    # configure the path to php.ini
+    PHPIniDir "D:/LAMP/php"
+
+    最后cmd进入bin目录下,httpd -k -install进行安装
+
+mysql：
+    mysql-5.6.1X默认的配置文件是在C:\Program Files\MySQL\MySQL Server 5.6\my-default.ini，或者自己建立一个my.ini文件，在其中修改或添加配置,如下： 
+    [mysqld] 
+    basedir=C:\Program Files\MySQL\MySQL Server 5.6（mysql所在目录） 
+    datadir=C:\Program Files\MySQL\MySQL Server 5.6\data （mysql所在目录\data）
+
+    以管理员身份运行cmd（一定要用管理员身份运行，不然权限不够）,进入mysql的bin文件夹输入mysqld -install(如果不用管理员身份运行，将会因为权限不够而出现错误：Install/Remove of the Service Denied!)
+
+    安装成功后,继续在cmd中输入:net start mysql,启动成功
+    此时很多人会出现错误，请看注意：
+    注意：这个时候经常会出现错误2和错误1067。
+    如果出现“错误2 系统找不到文件”，检查一下是否修改过配置文件或者是否进入在bin目录下操作，如果配置文件修改正确并且进入了bin文件夹，需要先删除mysql（输入 mysqld -remove）再重新安装（输入 mysqld -install）；
+    如果出现错误1067，那就是配置文件修改错误，确认一下配置文件是否正确。
+
+PHP：
+    将目录下的php.ini-development文件复制一份并改名为php.ini。
+    修改PHP.ini配置文件,设置如下信息：
+    extension=php_curl.dll
+    extension=php_gd2.dll
+    extension=php_imap.dll
+    extension=php_mbstring.dll
+    extension=php_mysql.dll
+    extension=php_mysqli.dll
+    extension=php_pdo_mysql.dll
+    extension=php_snmp.dll
+    extension=php_soap.dll
+    extension=php_sockets.dll
+
+    doc_root = "F:/php"   (可选)
+    extension_dir = "D:/php/php-5.4.45/ext"    (必填)
+    session.save_path = "D:/php/php-5.4.45/tmp"   (可选)
+    注意：extension_dir必须写对路径,不然加载不了扩展文件,phpinfo中也找不到扩展
+
+    注意：检测上面extension内容是否去掉了注释，且doc_root等配置路径是否正确
+
+    说明：在下载redis与php-redis扩展包时,还必须先phpinfo查看PHP版本信息与Compiler与Zend Extension Build与PHP Extension Build的信息,如：ts,VC11
