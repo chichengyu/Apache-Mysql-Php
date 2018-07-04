@@ -56,3 +56,7 @@ PHP：
     注意：检测上面extension内容是否去掉了注释，且doc_root等配置路径是否正确
 
     说明：在下载redis与php-redis扩展包时,还必须先phpinfo查看PHP版本信息与Compiler与Zend Extension Build与PHP Extension Build的信息,如：ts,VC11
+
+
+
+
