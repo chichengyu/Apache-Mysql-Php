@@ -1,6 +1,9 @@
 # Apache-Mysql-Php
 	记录一下windows下安装apache+2.4+mysql5.6.38+php5.6的安装过程与一些坑
 
+	这是整理好的环境包,下载地址：https://share.weiyun.com/5n3ESRJ
+
+
 Apache版本   	===>  Apache-2.4.33-win64-VC11
 
 
