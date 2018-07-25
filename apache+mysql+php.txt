@@ -44,7 +44,7 @@ PHP：
     extension=php_mysql.dll
     extension=php_mysqli.dll
     extension=php_pdo_mysql.dll
-    ;extension=php_snmp.dll   //必须注释掉,不然会PHP-m报错 MIB search path: c:/usr/share/snmp/mibs cannot find module
+    ;extension=php_snmp.dll //必须注释掉,不然会PHP -m报错 MIB search path: c:/usr/share/snmp/mibs cannot find module
     extension=php_soap.dll
     extension=php_sockets.dll
 
