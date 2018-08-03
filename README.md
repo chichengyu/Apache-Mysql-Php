@@ -55,8 +55,10 @@ PhpMyAdmin安装：
 	在浏览器中输入 http://localhost/phpmyadmin，出现登录界面就ok了。
 
 
-另外说明：修改Mysql密码为空的方法
-	update user set password=password(‘’) where user=’root’;
+另外说明：
+	
+	修改Mysql密码为空的方法
+		update user set password=password(‘’) where user=’root’;
 	再输入flush privileges;
 	然后 quit退出
 	重启Mysql，OK
