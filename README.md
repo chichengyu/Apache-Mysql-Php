@@ -22,11 +22,10 @@ Redis版本		===>  Redis-win-x64-3.0.504
 
 附：
 PhpMyAdmin安装：
-	
 	PhpMyAdmin官网：https://www.phpmyadmin.net/
 	
 
-	下载得到phpMyAdmin-4.7.0-all-languages.zip解压重命名为PhpMyAdmin，并进入该文件夹，找到config.sample.inc.php，复制一份改名为config.inc.php，用文本编辑器打开改文件。找到下列代码
+	下载得到phpMyAdmin-4.7.0-all-languages.zip解压重命名为PhpMyAdmin，并进入该文件夹，找到config.sample.inc.php，复制一份改名为config.inc.php，用文本编辑器打开改文件。找到下列代码：
 
 		$cfg['blowfish_secret'] = 'xiaochi',// 随便设置,只是一个短语密码
 
@@ -60,6 +59,6 @@ PhpMyAdmin安装：
 	
 	修改Mysql密码为空的方法
 		update user set password=password(‘’) where user=’root’;
-	再输入flush privileges;
+	再输入   flush privileges;
 	然后 quit退出
 	重启Mysql，OK
