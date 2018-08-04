@@ -32,7 +32,8 @@ PhpMyAdmin安装：
 		$cfg['Servers'][$i]['port'] = '3306';
 		$cfg['Servers'][$i]['user'] = 'root';
 		$cfg['Servers'][$i]['password'] = '';
-	进入apache的conf文件夹下，新建一个phpmyadmin.conf文件，文本编辑器打开，加入下列代码，如：	
+	进入apache的conf文件夹下，新建一个phpmyadmin.conf文件，文本编辑器打开，加入下列代码，如：
+		此处要特别注意  D:/LAMP/phpMyAdmin/  路径最后的斜线 /  不能少
 		Alias /phpmyadmin "D:/LAMP/phpMyAdmin/"
 		<Directory "D:/LAMP/phpMyAdmin/">
 		    Options Indexes FollowSymLinks MultiViews
