@@ -27,6 +27,11 @@ PhpMyAdmin安装：
 
 	下载得到phpMyAdmin-4.7.0-all-languages.zip解压重命名为PhpMyAdmin，并进入该文件夹，找到config.sample.inc.php，复制一份改名为config.inc.php，用文本编辑器打开改文件。找到下列代码：
 		$cfg['blowfish_secret'] = 'xiaochi',// 随便设置,只是一个短语密码
+	    并在最后追加如下：
+		$cfg['Servers'][$i]['host'] = 'localhost';
+		$cfg['Servers'][$i]['port'] = '3306';
+		$cfg['Servers'][$i]['user'] = 'root';
+		$cfg['Servers'][$i]['password'] = '';
 	进入apache的conf文件夹下，新建一个phpmyadmin.conf文件，文本编辑器打开，加入下列代码，如：	
 		Alias /phpmyadmin "D:/LAMP/phpMyAdmin/"
 		<Directory "D:/LAMP/phpMyAdmin/">
