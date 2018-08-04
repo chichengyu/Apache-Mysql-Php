@@ -35,14 +35,14 @@ PhpMyAdmin安装：
 	进入apache的conf文件夹下，新建一个phpmyadmin.conf文件，文本编辑器打开，加入下列代码，如：	
 		Alias /phpmyadmin "D:/LAMP/phpMyAdmin/"
 		<Directory "D:/LAMP/phpMyAdmin/">
-		Options Indexes FollowSymLinks MultiViews
-		AllowOverride all
-		Require all granted
-		DirectoryIndex index.php index.html
-		php_admin_value upload_max_filesize 128M
-		php_admin_value post_max_size 128M
-		php_admin_value max_execution_time 360
-		php_admin_value max_input_time 360
+			Options Indexes FollowSymLinks MultiViews
+			AllowOverride all
+			Require all granted
+			DirectoryIndex index.php index.html
+			php_admin_value upload_max_filesize 128M
+			php_admin_value post_max_size 128M
+			php_admin_value max_execution_time 360
+			php_admin_value max_input_time 360
 		</Directory>
 	保存退出
 	最后在apache/conf文件夹内找到配置文件httpd.conf，用文本编辑器打开，在末尾增加一行
