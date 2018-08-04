@@ -93,11 +93,13 @@ PhpMyAdmin：
 	这样的情况，其实解决此问题的方法已经提示了 Create a database named 'phpmyadmin' and setup the phpMyAdmin configuration storage there.
 	解决：创建一个phpmyadmin的数据库，然后在phpmyadmin的文件夹l里面找到phpmyadmin/sql/create_tables.sql，直接导入即可解决
 
-另外说明：
-	
-	修改Mysql密码为空的方法
+附：修改Mysql密码为空的方法
+	cmd登录mysql,选择mysql数据库，并执行如下语句：
 		update user set password=password(‘’) where user=’root’;
-	再输入flush privileges;
-	然后 quit退出
+	再输入
+		flush privileges;
+	然后
+		quit
+	退出
 	重启Mysql，OK
 
