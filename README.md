@@ -23,12 +23,11 @@ Redis版本		===>  Redis-win-x64-3.0.504
 附：PhpMyAdmin安装：PhpMyAdmin官网：https://www.phpmyadmin.net/	
 
 附：修改Mysql密码为空的方法
-附：修改Mysql密码为空的方法,
 	cmd登录mysql,选择mysql数据库，并执行如下语句：
 		update user set password=password(‘’) where user=’root’;
-	再输入  
+	再输入
 		flush privileges;
-	然后 
+	然后
 		quit
 	退出
 	重启Mysql，OK
