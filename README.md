@@ -54,7 +54,7 @@ PhpMyAdmin安装：
 	
 	
 	注意：phpmyadmin安装完成，登录进入后，滚动条拉倒最底部，可能会看到如下信息
-    	           phpmyadmin显示高级功能尚未完全设置部分功能未激活
+		phpmyadmin显示高级功能尚未完全设置部分功能未激活，请点击这李查看原因
 	      这样的情况，其实解决此问题的方法已经提示了 Create a database named 'phpmyadmin' and setup the phpMyAdmin configuration storage there.
 	      解决：创建一个phpmyadmin的数据库，然后在phpmyadmin的文件夹l里面找到phpmyadmin/sql/create_tables.sql，直接导入即可解决
 
