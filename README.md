@@ -20,6 +20,7 @@ Redis版本		===>  Redis-win-x64-3.0.504
 
 	注意：安装php_redis扩展与redis时,必须先phpinfo查看相对应的支持与版本
 	php-redis扩展下载地址：http://pecl.php.net/package/redis
+	redis的windows版本下载地址：https://github.com/MicrosoftArchive/redis/releases
 
 附：PhpMyAdmin安装：PhpMyAdmin官网：https://www.phpmyadmin.net/	
 
